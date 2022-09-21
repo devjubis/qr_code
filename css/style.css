@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #afafaff3;
+}
+
+.container {
+    height: 260px;
+    background: #751440;
+    max-width: 410px;
+    border-radius: 7px;
+    padding: 16px 25px;
+}
+
+.container.active {
+    height: 530px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #fffafad7;
+}
+
+.container .formulario {
+    margin: 20px 0 25px;
+}
+
+.formulario :where(input,button){
+    width: 100%;
+    height:  55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.formulario input{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #AAAAAA;
+    padding: 0 17px; 
+    border: 1px solid #f5e9e9;
+    background: #f0ebebf6;
+}
+
+.formulario button{
+    color:  #FFFFFF;
+    cursor: pointer; 
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    background: #d46d53e8;
+}
+
+.container .qr-code {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    padding: 36px 0;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+.container.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.5s ease;
+}
